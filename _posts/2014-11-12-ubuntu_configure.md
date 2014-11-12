@@ -8,6 +8,7 @@ category: "技术"
 多服务器管理中格式化是必不可少的。
 
 - 配置用户和组
+
 ```
 root@AY140519083555626db7Z:~# groupadd admin
 root@AY140519083555626db7Z:~# useradd -m -g admin tony
@@ -20,12 +21,14 @@ Retype new UNIX password:
 passwd: password updated successfully
 ```
 - 改主机名
+
 ```
 root@AY140519083555626db7Z:~# echo 'CDN' > /etc/hostname
 root@AY140519083555626db7Z:~# vim /etc/hosts
 root@AY140519083555626db7Z:~# hostname newhostname
 ```
 - 做完自动登录发现自动登录后默认是dash，修改到bash
+
 ```
 $ echo $SHELL
 /bin/sh
@@ -36,6 +39,7 @@ $ sudo chsh -s /bin/bash tony
 ```
 
 - vim设置 ~/.vimrc
+
 ```
 "自动对齐
 set autoindent
@@ -61,6 +65,7 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 ```
 
 - bash设置 /etc/bashrc
+
 ```
 shopt -s checkwinsize
 case `id -u` in
@@ -75,6 +80,7 @@ esac
 ```
 
 - 自动登录设置
+
 ```
 ssh-keygen -t rsa
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@IP
