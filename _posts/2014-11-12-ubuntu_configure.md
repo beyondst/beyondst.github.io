@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title:  Ubuntu初始化设定
