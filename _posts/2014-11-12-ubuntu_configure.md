@@ -5,6 +5,8 @@ date:   2014-11-12
 category: "技术"
 ---
 
+多服务器管理中格式化是必不可少的。
+
 - 配置用户和组
 ```
 root@AY140519083555626db7Z:~# groupadd admin
@@ -60,8 +62,6 @@ au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|
 
 - bash设置 /etc/bashrc
 ```
-# User specific aliases and functions
-# Turn on checkwinsize
 shopt -s checkwinsize
 case `id -u` in
     0)
